@@ -14,10 +14,14 @@ export class RequestController {
 	 */
 	public async run(range: Range) {
 		const editor = window.activeTextEditor;
-		if (!editor?.document) return;
+		if (!editor?.document) {
+			return;
+		}
 
 		const selectedText = this.selector.getSelectedText(editor, range);
-		if (!selectedText) return;
+		if (!selectedText) {
+			return;
+		}
 
 		const commandString = selectedText.replace(/\r?\n/g, " ");
 		runInTerminal(commandString);

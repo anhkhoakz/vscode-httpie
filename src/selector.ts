@@ -18,7 +18,9 @@ export class Selector {
 	 * Gets the selected text or the current HTTP request block from the editor.
 	 */
 	public getSelectedText(editor: TextEditor, range?: Range): string | null {
-		if (!editor?.document) return null;
+		if (!editor?.document) {
+			return null;
+		}
 
 		if (!editor.selection.isEmpty) {
 			return editor.document.getText(editor.selection);
@@ -33,7 +35,9 @@ export class Selector {
 	 */
 	public static getDelimiterRows(lines: string[]): number[] {
 		return lines.reduce((rows: number[], line, idx) => {
-			if (/^\/{2,}/.test(line)) rows.push(idx);
+			if (/^\/{2,}/.test(line)) {
+				rows.push(idx);
+			}
 			return rows;
 		}, []);
 	}
@@ -63,8 +67,12 @@ export class Selector {
 	): string | null {
 		const lines = fullText.split(/\r?\n/g);
 		const delimiterLineNumbers = Selector.getDelimiterRows(lines);
-		if (!delimiterLineNumbers.length) return fullText;
-		if (delimiterLineNumbers.includes(currentLine)) return null;
+		if (!delimiterLineNumbers.length) {
+			return fullText;
+		}
+		if (delimiterLineNumbers.includes(currentLine)) {
+			return null;
+		}
 
 		if (currentLine < delimiterLineNumbers[0]) {
 			return lines.slice(0, delimiterLineNumbers[0]).join(EOL);
