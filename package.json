@@ -1,0 +1,76 @@
+{
+  "name": "httpie-client",
+  "displayName": "Httpie Client",
+  "description": "HTTPie support for Visual Studio Code",
+  "version": "0.0.1",
+  "publisher": "anhkhoakz",
+  "icon": "assets/icon.png",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/anhkhoakz/vscode-httpie"
+  },
+  "license": "MIT",
+  "engines": {
+    "vscode": "^1.99.0",
+    "node": "^22.0.0",
+    "pnpm": "^10.7.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [
+    "onCommand:httpie-client.request",
+    "onLanguage:httpie"
+  ],
+  "main": "./out/extension.js",
+  "contributes": {
+    "languages": [
+      {
+        "id": "httpie",
+        "aliases": [
+          "HTTPIE",
+          "httpie",
+          "Httpie"
+        ],
+        "extensions": [
+          ".httpie"
+        ]
+      }
+    ],
+    "grammars": [
+      {
+        "language": "httpie",
+        "scopeName": "source.httpie",
+        "path": "./syntaxes/httpie.json"
+      }
+    ],
+    "snippets": [],
+    "commands": []
+  },
+  "scripts": {
+    "vscode:prepublish": "pnpm run package",
+    "compile": "webpack",
+    "watch": "webpack --watch",
+    "package": "webpack --mode production --devtool hidden-source-map",
+    "compile-tests": "tsc -p . --outDir out",
+    "watch-tests": "tsc -p . -w --outDir out",
+    "pretest": "pnpm run compile-tests && pnpm run compile && pnpm run lint",
+    "lint": "biome lint src/",
+    "lint:fix": "biome lint src/ --write --unsafe",
+    "format": "biome format src/",
+    "format:fix": "biome format src/ --write",
+    "test": "vscode-test"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "^1.9.4",
+    "@types/mocha": "^10.0.10",
+    "@types/node": "22.x",
+    "@types/vscode": "^1.99.1",
+    "@vscode/test-cli": "^0.0.10",
+    "@vscode/test-electron": "^2.5.2",
+    "ts-loader": "^9.5.2",
+    "typescript": "^5.8.3",
+    "webpack": "^5.99.7",
+    "webpack-cli": "^6.0.1"
+  }
+}
