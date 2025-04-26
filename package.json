@@ -25,14 +25,6 @@
   ],
   "icon": "assets/icon.png",
   "main": "./dist/extension.js",
-  "files": [
-    "dist/",
-    "syntaxes/",
-    "assets/",
-    "README.md",
-    "CHANGELOG.md",
-    "LICENSE"
-  ],
   "license": "MIT",
   "engines": {
     "vscode": "^1.99.0",
@@ -90,7 +82,8 @@
     "format": "biome format src/",
     "format:fix": "biome format src/ --write",
     "test": "vscode-test",
-    "prepare": "husky"
+    "prepare": "husky",
+    "publish": "vsce package"
   },
   "devDependencies": {
     "@biomejs/biome": "^1.9.4",
