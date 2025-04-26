@@ -23,7 +23,13 @@ export class RequestController {
 			return;
 		}
 
-		const commandString = selectedText.replace(/\r?\n/g, " ");
+		const trimmed = selectedText.trim();
+		const methodUrlRegex =
+			/^(GET|POST|PUT|DELETE|PATCH|HEAD|OPTIONS)\s+https?:\/\/.+/i;
+		let commandString = trimmed.replace(/\r?\n/g, " ");
+		if (methodUrlRegex.test(commandString)) {
+			commandString = `http ${commandString}`;
+		}
 		runInTerminal(commandString);
 	}
 }
