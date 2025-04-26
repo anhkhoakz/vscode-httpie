@@ -59,7 +59,8 @@
     "lint:fix": "biome lint src/ --write --unsafe",
     "format": "biome format src/",
     "format:fix": "biome format src/ --write",
-    "test": "vscode-test"
+    "test": "vscode-test",
+    "prepare": "husky"
   },
   "devDependencies": {
     "@biomejs/biome": "^1.9.4",
@@ -68,6 +69,7 @@
     "@types/vscode": "^1.99.1",
     "@vscode/test-cli": "^0.0.10",
     "@vscode/test-electron": "^2.5.2",
+    "husky": "^9.1.7",
     "ts-loader": "^9.5.2",
     "typescript": "^5.8.3",
     "webpack": "^5.99.7",

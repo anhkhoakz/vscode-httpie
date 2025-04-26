@@ -1,0 +1,3 @@
+pnpm vscode:prepublish
+pnpm lint:fix
+pnpm format:fix
