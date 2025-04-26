@@ -14,6 +14,8 @@ jobs:
           node-version: 22
           cache: 'pnpm'
           cache-dependency-path: pnpm-lock.yaml
+      - name: Install pnpm
+        run: npm install -g pnpm
       - run: pnpm install --frozen-lockfile
       - name: Publish to Open VSX Registry
         uses: HaaLeo/publish-vscode-extension@v2
