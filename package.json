@@ -2,7 +2,7 @@
   "name": "httpie-client",
   "displayName": "HTTPie Client",
   "description": "HTTPie support for Visual Studio Code",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "publisher": "anhkhoakz",
   "author": "anhkhoakz",
   "homepage": "https://github.com/anhkhoakz/vscode-httpie#readme",
