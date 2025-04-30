@@ -25,14 +25,6 @@
   ],
   "icon": "assets/icon.png",
   "main": "./dist/extension.js",
-  "files": [
-    "dist/",
-    "syntaxes/",
-    "assets/",
-    "README.md",
-    "CHANGELOG.md",
-    "LICENSE"
-  ],
   "license": "MIT",
   "engines": {
     "vscode": "^1.99.0",
