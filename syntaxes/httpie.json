@@ -1,61 +1,61 @@
 {
-  "name": "httpie",
-  "fileTypes": [
-    "httpie"
-  ],
-  "scopeName": "source.httpie",
-  "patterns": [
-    {
-      "match": "\\b(http)\\b",
-      "captures": {
-        "1": {
-          "name": "keyword.control"
-        }
-      }
-    },
-    {
-      "begin": "//",
-      "end": "$",
-      "name": "comment.line.double-slash.httpie"
-    },
-    {
-      "match": "\\b(GET|POST|PUT|DELETE)\\b",
-      "name": "constant.language.httpie"
-    },
-    {
-      "match": "--[a-zA-Z0-9-]+",
-      "name": "support.constant.option.httpie"
-    },
-    {
-      "match": "\\b[a-zA-Z0-9@:%._\\+~#=]{2,256}\\.[a-z]{2,6}\\b([-a-zA-Z0-9@:%_\\+.~#?&//=]*)",
-      "name": "string.unquoted.url.httpie"
-    },
-    {
-      "match": "\\b(\\S+):(\\S*)\\b",
-      "captures": {
-        "1": {
-          "name": "variable.parameter.header.httpie"
-        },
-        "2": {
-          "name": "string.unquoted.value.httpie"
-        }
-      }
-    },
-    {
-      "match": "\\b(\\S+[^=])=",
-      "captures": {
-        "1": {
-          "name": "variable.parameter.data.httpie"
-        }
-      }
-    },
-    {
-      "match": "\"(.*?)\"",
-      "name": "string.quoted.double.httpie"
-    },
-    {
-      "match": "'(.*?)'",
-      "name": "string.quoted.single.httpie"
-    }
-  ]
+        "name": "httpie",
+        "fileTypes": [
+                "httpie"
+        ],
+        "scopeName": "source.httpie",
+        "patterns": [
+                {
+                        "match": "\\b(http)\\b",
+                        "captures": {
+                                "1": {
+                                        "name": "keyword.control"
+                                }
+                        }
+                },
+                {
+                        "begin": "//",
+                        "end": "$",
+                        "name": "comment.line.double-slash.httpie"
+                },
+                {
+                        "match": "\\b(GET|POST|PUT|DELETE)\\b",
+                        "name": "constant.language.httpie"
+                },
+                {
+                        "match": "--[a-zA-Z0-9-]+",
+                        "name": "support.constant.option.httpie"
+                },
+                {
+                        "match": "\\b[a-zA-Z0-9@:%._\\+~#=]{2,256}\\.[a-z]{2,6}\\b([-a-zA-Z0-9@:%_\\+.~#?&//=]*)",
+                        "name": "string.unquoted.url.httpie"
+                },
+                {
+                        "match": "\\b(\\S+):(\\S*)\\b",
+                        "captures": {
+                                "1": {
+                                        "name": "variable.parameter.header.httpie"
+                                },
+                                "2": {
+                                        "name": "string.unquoted.value.httpie"
+                                }
+                        }
+                },
+                {
+                        "match": "\\b(\\S+[^=])=",
+                        "captures": {
+                                "1": {
+                                        "name": "variable.parameter.data.httpie"
+                                }
+                        }
+                },
+                {
+                        "match": "\"(.*?)\"",
+                        "name": "string.quoted.double.httpie"
+                },
+                {
+                        "match": "'(.*?)'",
+                        "name": "string.quoted.single.httpie"
+                }
+        ]
 }

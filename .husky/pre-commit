@@ -1,3 +1,3 @@
-pnpm vscode:prepublish
-pnpm lint:fix
-pnpm format:fix
+bun vscode:prepublish
+bun lint:fix
+bun format:fix

@@ -1,8 +1,10 @@
-<div style="text-align: center">
-
-<p><img src="assets/icon.png" width="200" alt="Project Icon"></p>
-
 # HTTPie Client
+
+<div align="center">
+
+<img src="assets/icon.png" width="200" alt="Project Icon">
+
+</div>
 
 ## HTTPie for Visual Studio Code
 
@@ -13,7 +15,8 @@
 ## Installation
 
 1. Install [HTTPie](https://httpie.org) client
-2. Install extension [VS Code HTTPie](https://marketplace.visualstudio.com/items?itemName=anhkhoakz.httpie-client) from the marketplace
+2. Install extension [VS Code HTTPie](https://marketplace.visualstudio.com/items?itemName=anhkhoakz.httpie-client)
+from the marketplace
 
 ## Usage
 
@@ -35,7 +38,8 @@
        tbm==isch
    ```
 
-3. Click the `⚡️ Send request` button that appears above each command in the file, and the command will execute in the Terminal.
+3. Click the `⚡️ Send request` button that appears above each command in the
+file, and the command will execute in the Terminal.
 
 ## Features
 
@@ -47,7 +51,8 @@
 
 ## Requirements
 
-- [HTTPie](https://httpie.org) must be installed and available in your system PATH
+- [HTTPie](https://httpie.org) must be installed and available in your system
+PATH
 
 ## Extension Settings
 
@@ -56,7 +61,8 @@ This extension does not contribute any settings at this time.
 ## Known Issues
 
 - Only supports `.httpie` files
-- Requests are executed in the integrated terminal; output is not captured in the editor
+- Requests are executed in the integrated terminal; output is not captured in
+the editor
 
 ## Release Notes
 
